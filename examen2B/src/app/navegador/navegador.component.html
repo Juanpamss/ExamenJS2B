@@ -1,9 +1,44 @@
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" [routerLink]="['carrito']">Carrito</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Usuario</a>
-  </li>
+<div class="row">
 
-</ul>
+  <div class="col-sm-12">
+
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <button mat-button="" style="padding-top: 10px">
+          <mat-icon matBadge="15" matBadgeColor="warn" routerLink="/carrito">shopping_cart</mat-icon>
+        </button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Usuario</a>
+      </li>
+    </ul>
+    <form class="example" style="margin:auto;max-width:300px">
+      <input type="text" (keyup)="onNameKeyUp($event)" placeholder="Buscar.." name="search2">
+      <button type="button" (click)="getProfile()"><i class="fa fa-search"></i></button>
+    </form>
+
+  </div>
+
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <app-desarrolladora-general [resultadosDesa]="respuestaServerDesa"></app-desarrolladora-general>
+
+  </div>
+
+  <div class="col-sm-12">
+
+    <app-juego-detalle [resultadosJueg]="respuestaServerJueg"></app-juego-detalle>
+
+  </div>
+
+
+
+</div>
+
+
+
