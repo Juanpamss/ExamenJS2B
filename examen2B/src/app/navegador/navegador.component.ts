@@ -46,11 +46,8 @@ export class NavegadorComponent implements OnInit {
 
       )
 
-  }
+    this.mandarDatos()
 
-  mostrarInfo(){
-
-    console.log(this.respuestaServer)
   }
 
 }

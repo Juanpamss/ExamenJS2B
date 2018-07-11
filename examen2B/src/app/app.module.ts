@@ -10,12 +10,14 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from "@angular/material";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { DesarrolladoraGeneralComponent } from './desarrolladora-general/desarrolladora-general.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavegadorComponent,
-    CarritoComponent
+    CarritoComponent,
+    DesarrolladoraGeneralComponent
   ],
   imports: [
     BrowserModule,
