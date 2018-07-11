@@ -1,0 +1,24 @@
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <h2 style="padding-left: 40px">Juegos:</h2>
+
+  </div>
+
+</div>
+
+<div class="row"  style="margin-left: 20px">
+
+  <div class="col-sm-2" *ngFor="let info of resultadosJueg; let indice = index" style="margin-right: 20px; margin-top: 20px">
+    <div class="card" style="width: 250px;">
+      <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{info.nombreJuego}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
+        <a href="#" class="btn btn-primary">Detalles</a>
+        <!--<button type="button" class="btn btn-primary" (click)="mandarDatos(indice)">Tarjeta</button>-->
+      </div>
+    </div>
+  </div>
+</div>

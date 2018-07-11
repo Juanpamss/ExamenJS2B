@@ -12,20 +12,25 @@ export class NavegadorComponent implements OnInit {
 
   buscar: string = ""
 
-  respuestaServer = []
+  respuestaServerDesa = []
 
-  constructor(private httpClient: HttpClient, private data: ServicioDesarrolladorasService){
+  respuestaServerJueg = []
+
+  constructor(private httpClient: HttpClient,private httpClient2: HttpClient, private data: ServicioDesarrolladorasService){
   }
 
   ngOnInit() {
 
-    this.data.mensajeActual.subscribe(mensaje => this.respuestaServer = mensaje)
+    this.data.mensajeActual.subscribe(mensaje => this.respuestaServerDesa = mensaje)
+
+    this.data.mensajeActual2.subscribe(mensaje => this.respuestaServerJueg = mensaje)
 
   }
 
   mandarDatos(){
 
-    this.data.cambiarMensaje(this.respuestaServer)
+    this.data.cambiarMensaje(this.respuestaServerDesa)
+    this.data.cambiarMensaje2(this.respuestaServerJueg)
   }
 
   onNameKeyUp(event:any){
@@ -40,8 +45,18 @@ export class NavegadorComponent implements OnInit {
       .subscribe(
         (data:any[]) => {
 
-          this.respuestaServer = data
-          console.log(this.respuestaServer)
+          this.respuestaServerDesa = data
+          console.log(this.respuestaServerDesa)
+        }
+
+      )
+
+    this.httpClient2.get(`http://localhost:1337/juego?nombreJuego=${this.buscar}`)
+      .subscribe(
+        (data:any[]) => {
+
+          this.respuestaServerJueg = data
+          console.log(this.respuestaServerJueg)
         }
 
       )

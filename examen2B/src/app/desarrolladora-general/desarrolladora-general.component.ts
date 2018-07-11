@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.service";
 
 @Component({
@@ -6,15 +6,15 @@ import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.servic
   templateUrl: './desarrolladora-general.component.html',
   styleUrls: ['./desarrolladora-general.component.css']
 })
-export class DesarrolladoraGeneralComponent implements OnInit {
+export class DesarrolladoraGeneralComponent implements OnInit{
 
-  resultados = []
+  @Input() resultadosDesa: any;
 
   constructor(private data: ServicioDesarrolladorasService) { }
 
   ngOnInit() {
 
-    this.data.mensajeActual.subscribe(mensaje => this.resultados = mensaje)
+    this.data.mensajeActual.subscribe(mensaje => this.resultadosDesa = mensaje)
   }
 
 }

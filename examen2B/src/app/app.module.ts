@@ -11,13 +11,19 @@ import {MatIconModule} from "@angular/material";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { DesarrolladoraGeneralComponent } from './desarrolladora-general/desarrolladora-general.component';
+import { JuegoDetalleComponent } from './juego-detalle/juego-detalle.component';
+import { DesarrolladoraComponent } from './desarrolladora/desarrolladora.component';
+import { DesarrolladoraDetalleComponent } from './desarrolladora-detalle/desarrolladora-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavegadorComponent,
     CarritoComponent,
-    DesarrolladoraGeneralComponent
+    DesarrolladoraGeneralComponent,
+    JuegoDetalleComponent,
+    DesarrolladoraComponent,
+    DesarrolladoraDetalleComponent
   ],
   imports: [
     BrowserModule,
