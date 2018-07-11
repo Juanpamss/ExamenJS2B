@@ -4,6 +4,10 @@ import {CarritoComponent} from "./carrito/carrito.component";
 
 export const RUTAS_APP: Routes = [
   {
+    path: 'home',
+    component: NavegadorComponent,
+  },
+  {
     path: 'carrito',
     component: CarritoComponent,
   },
