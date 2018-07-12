@@ -43,7 +43,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
   }
 
-  agregarDatos() {
+  agregarDatos(id) {
 
     this.arregloCarrito.push(this.juegoDetalle)
 
@@ -51,11 +51,25 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.mandarDatos()
 
+    this.cambiarEstado(id)
+
   }
 
   mandarDatos() {
 
     this.data.cambiarMensaje3(this.arregloCarrito)
+  }
+
+  cambiarEstado(id){
+    this.httpClient.put(`http://localhost:1337/juego/${id}`, {
+
+      estado : false
+
+    }).subscribe(
+      res => {
+        console.log(res);
+      }
+    );
   }
 
 }

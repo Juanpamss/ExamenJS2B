@@ -7,7 +7,20 @@
 
 </div>
 
-<div class="row"  style="margin-left: 20px">
+<div id="disponible" class="row"  style="margin-left: 20px">
+  <div class="col-sm-2" *ngFor="let info of juegoDetalle; let indice = index" style="margin-right: 20px; margin-top: 20px">
+    <div class="card" style="width: 250px">
+      <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{info.nombreJuego}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
+        <button type="button" (click)="agregarDatos(info.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div id="noDisponible" class="row"  style="margin-left: 20px">
 
   <div class="col-sm-2" *ngFor="let info of juegoDetalle; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
@@ -15,11 +28,11 @@
       <div class="card-body">
         <h5 class="card-title">{{info.nombreJuego}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
-        <button type="button" (click)="agregarDatos()" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
+        <button type="button" (click)="agregarDatos(info.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 
 <!--

@@ -1,16 +1,12 @@
 <div class="row">
   <div class="col-sm-12">
-
     <app-navegador-principal></app-navegador-principal>
-
   </div>
-
 </div>
 
 <div class="row" style="margin-left: 30px">
 
   <div class="col-sm-6">
-
       <div class="card">
         <div class="card-header" style="font-weight: bold">Datos de la Cuenta</div>
         <div class="card-body" *ngFor="let info of datosFactura">
@@ -24,17 +20,15 @@
   </div>
 
   <div class="col-sm-6">
-
     <button type="button" class="btn btn-success">Completar la orden</button>
-
   </div>
-
 </div>
+
+<br>
 
 <div class="row" style="margin-left: 30px">
 
   <div class="col-sm-6">
-
     <div *ngFor="let info of datosFactura">
       <div class="card">
         <div class="card-header" style="font-weight: bold">Factura</div>
@@ -45,23 +39,19 @@
           <p class="card-text">Direccion: {{info.direccion}}</p>
         </div>
       </div>
-
     </div>
 
   </div>
 
   <div class="col-sm-6">
-
     <app-modal-factura></app-modal-factura>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Editar Datos</button>
-
   </div>
 
 </div>
 
 <div class="row"  style="margin-left: 30px">
-
-  <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
+  <div class="col-sm-2" *ngFor="let info of listaCompra" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
       <img class="card-img-top" src={{info[0].imagenJuego}} alt="Card image cap">
       <div class="card-body">
@@ -71,5 +61,4 @@
       </div>
     </div>
   </div>
-
 </div>

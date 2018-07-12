@@ -16,8 +16,6 @@ export class NavegadorComponent implements OnInit {
 
   respuestaServerJueg = []
 
-  prueba
-
   constructor(private httpClient: HttpClient,private httpClient2: HttpClient, private data: ServicioDesarrolladorasService){
   }
 
@@ -26,10 +24,6 @@ export class NavegadorComponent implements OnInit {
     this.data.mensajeActual.subscribe(mensaje => this.respuestaServerDesa = mensaje)
 
     this.data.mensajeActual2.subscribe(mensaje => this.respuestaServerJueg = mensaje)
-
-    this.data.mensajeActual3.subscribe(mensaje => this.prueba = mensaje)
-
-    console.log(this.prueba)
 
   }
 
@@ -46,7 +40,7 @@ export class NavegadorComponent implements OnInit {
         (data:any[]) => {
 
           this.respuestaServerDesa = data
-          //console.log(this.respuestaServerDesa)
+          console.log(this.respuestaServerDesa)
         }
 
       )
