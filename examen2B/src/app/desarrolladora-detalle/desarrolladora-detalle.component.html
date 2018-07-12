@@ -1,10 +1,23 @@
-<div class="row"  style="margin-left: 20px">
-  <div class="col-sm-2" >
-    <div class="card" style="width: 200px;">
+<div class="row"  style="margin-left: 20px; margin-top: 20px">
+  <div class="col-sm-2" *ngFor="let info of desarrolladoraDetalle; let indice = index">
+    <div class="card" style="width: 500px;">
       <div class="card-body">
-        <h5 class="card-title">Desa</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Ubicacion: </h6>
+        <h5 class="card-title">{{info.nombre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ubicacion: {{info.ubicacion}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Fecha de Creación: {{info.fechaCreacion}}</h6>
+        <img src={{info.imagenDesarrolladora}} alt="Card image cap">
       </div>
     </div>
   </div>
 </div>
+
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <app-juego-detalle [resultadosJueg]="datosHijos"></app-juego-detalle>
+
+  </div>
+
+</div>
+

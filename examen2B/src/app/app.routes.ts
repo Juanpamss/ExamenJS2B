@@ -2,6 +2,7 @@ import {Routes} from "@angular/router";
 import {NavegadorComponent} from "./navegador/navegador.component";
 import {CarritoComponent} from "./carrito/carrito.component";
 import {DesarrolladoraComponent} from "./desarrolladora/desarrolladora.component";
+import {JuegoComponent} from "./juego/juego.component";
 
 export const RUTAS_APP: Routes = [
   {
@@ -11,6 +12,11 @@ export const RUTAS_APP: Routes = [
   {
     path: 'carrito',
     component: CarritoComponent,
+  },
+
+  {
+    path: 'desarrolladora/:id/juego/:idJuego',
+    component: JuegoComponent
   },
   {
     path: 'desarrolladora/:id',

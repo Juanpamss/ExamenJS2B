@@ -1,4 +1,22 @@
-<p>
-  carrito works!
-  Holaaaaa
-</p>
+<div class="row">
+  <div class="col-sm-12">
+
+    <app-navegador-principal></app-navegador-principal>
+
+  </div>
+
+</div>
+
+<div class="row"  style="margin-left: 20px">
+
+  <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
+    <div class="card" style="width: 250px">
+      <img class="card-img-top" src={{info[indice].imagenJuego}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{info[indice].nombreJuego}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info[indice].plataforma}}</h6>
+        <button type="button" class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

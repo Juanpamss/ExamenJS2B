@@ -1,8 +1,7 @@
 <div class="row">
-
   <div class="col-sm-12">
 
-    <h2 style="padding-left: 40px">Juegos:</h2>
+    <app-navegador-principal></app-navegador-principal>
 
   </div>
 
@@ -10,13 +9,13 @@
 
 <div class="row"  style="margin-left: 20px">
 
-  <div class="col-sm-2" *ngFor="let info of resultadosJueg; let indice = index" style="margin-right: 20px; margin-top: 20px">
+  <div class="col-sm-2" *ngFor="let info of juegoDetalle; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
       <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{info.nombreJuego}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
-        <button type="button" [routerLink]="['/desarrolladora', info.desarrolladoraIdFK.id, 'juego', info.id]" class="btn btn-primary">Detalles</button>
+        <button type="button" (click)="mandarDatos()" [routerLink]="['/carrito']" class="btn btn-primary">Añadir al Carrito</button>
       </div>
     </div>
   </div>

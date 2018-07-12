@@ -27,12 +27,6 @@ export class NavegadorComponent implements OnInit {
 
   }
 
-  mandarDatos(){
-
-    this.data.cambiarMensaje(this.respuestaServerDesa)
-    this.data.cambiarMensaje2(this.respuestaServerJueg)
-  }
-
   onNameKeyUp(event:any){
 
     this.buscar = event.target.value;
@@ -46,7 +40,7 @@ export class NavegadorComponent implements OnInit {
         (data:any[]) => {
 
           this.respuestaServerDesa = data
-          console.log(this.respuestaServerDesa)
+          //console.log(this.respuestaServerDesa)
         }
 
       )
@@ -56,7 +50,7 @@ export class NavegadorComponent implements OnInit {
         (data:any[]) => {
 
           this.respuestaServerJueg = data
-          console.log(this.respuestaServerJueg)
+          //console.log(this.respuestaServerJueg)
         }
 
       )
@@ -64,5 +58,11 @@ export class NavegadorComponent implements OnInit {
     this.mandarDatos()
 
   }
+  mandarDatos(){
+
+    this.data.cambiarMensaje(this.respuestaServerDesa)
+    this.data.cambiarMensaje2(this.respuestaServerJueg)
+  }
+
 
 }

@@ -14,6 +14,9 @@ import { DesarrolladoraGeneralComponent } from './desarrolladora-general/desarro
 import { JuegoDetalleComponent } from './juego-detalle/juego-detalle.component';
 import { DesarrolladoraComponent } from './desarrolladora/desarrolladora.component';
 import { DesarrolladoraDetalleComponent } from './desarrolladora-detalle/desarrolladora-detalle.component';
+import { JuegoComponent } from './juego/juego.component';
+import { JuegoDetalleExtendidoComponent } from './juego-detalle-extendido/juego-detalle-extendido.component';
+import { NavegadorPrincipalComponent } from './navegador-principal/navegador-principal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { DesarrolladoraDetalleComponent } from './desarrolladora-detalle/desarro
     DesarrolladoraGeneralComponent,
     JuegoDetalleComponent,
     DesarrolladoraComponent,
-    DesarrolladoraDetalleComponent
+    DesarrolladoraDetalleComponent,
+    JuegoComponent,
+    JuegoDetalleExtendidoComponent,
+    NavegadorPrincipalComponent
   ],
   imports: [
     BrowserModule,

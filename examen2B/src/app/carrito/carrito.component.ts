@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.service";
 
 @Component({
   selector: 'app-carrito',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
-  constructor() { }
+  listaCompra = []
+
+  items: number
+
+  constructor(private data: ServicioDesarrolladorasService) { }
 
   ngOnInit() {
+
+    this.data.mensajeActual3.subscribe(mensaje => this.listaCompra = mensaje)
+
+    this.items = this.listaCompra.length
+
   }
+
 
 }

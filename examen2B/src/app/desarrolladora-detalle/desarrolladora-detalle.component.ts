@@ -11,6 +11,8 @@ export class DesarrolladoraDetalleComponent implements OnInit {
 
   desarrolladoraDetalle: any
 
+  datosHijos: any
+
   constructor(private _activatedRoute: ActivatedRoute, private httpClient: HttpClient ) {
 
     this._activatedRoute.params.subscribe(params =>{
@@ -30,7 +32,10 @@ export class DesarrolladoraDetalleComponent implements OnInit {
         (data:any[]) => {
 
           this.desarrolladoraDetalle = data
-          console.log(this.desarrolladoraDetalle)
+
+          this.datosHijos = data[0].juegos
+
+          //console.log(this.desarrolladoraDetalle)
         }
 
       )
