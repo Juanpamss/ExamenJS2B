@@ -21,6 +21,13 @@ export const RUTAS_APP: Routes = [
   {
     path: 'desarrolladora/:id',
     component: DesarrolladoraComponent,
+    children:
+    [{
+
+      path: 'juego/:idJuego',
+      component: JuegoComponent
+
+    }]
   },
   {
     path: '**',

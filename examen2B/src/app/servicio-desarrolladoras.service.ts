@@ -12,9 +12,13 @@ export class ServicioDesarrolladorasService {
 
   private fuenteMensaje3 = new BehaviorSubject<any>([]);
 
+  private fuenteMensaje4 = new BehaviorSubject<any>([]);
+
   mensajeActual = this.fuenteMensaje.asObservable();
   mensajeActual2 = this.fuenteMensaje2.asObservable();
   mensajeActual3 = this.fuenteMensaje3.asObservable();
+  mensajeActual4 = this.fuenteMensaje4.asObservable();
+
   constructor() { }
 
 
@@ -35,4 +39,11 @@ export class ServicioDesarrolladorasService {
     this.fuenteMensaje3.next(mensaje)
 
   }
+
+  cambiarMensaje4(mensaje){
+
+    this.fuenteMensaje4.next(mensaje)
+
+  }
+
 }

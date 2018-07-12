@@ -15,6 +15,13 @@ export class DesarrolladoraGeneralComponent implements OnInit{
   ngOnInit() {
 
     this.data.mensajeActual.subscribe(mensaje => this.resultadosDesa = mensaje)
+
+  }
+
+  datosJuego(){
+
+      this.data.cambiarMensaje2(this.resultadosDesa[0].juegos)
+
   }
 
 }

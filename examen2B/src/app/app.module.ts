@@ -17,6 +17,16 @@ import { DesarrolladoraDetalleComponent } from './desarrolladora-detalle/desarro
 import { JuegoComponent } from './juego/juego.component';
 import { JuegoDetalleExtendidoComponent } from './juego-detalle-extendido/juego-detalle-extendido.component';
 import { NavegadorPrincipalComponent } from './navegador-principal/navegador-principal.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from "@angular/forms";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from "@angular/material";
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes.pipe';
+import { ModalFacturaComponent } from './modal-factura/modal-factura.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +39,9 @@ import { NavegadorPrincipalComponent } from './navegador-principal/navegador-pri
     DesarrolladoraDetalleComponent,
     JuegoComponent,
     JuegoDetalleExtendidoComponent,
-    NavegadorPrincipalComponent
+    NavegadorPrincipalComponent,
+    SearchPipe,
+    ModalFacturaComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +55,14 @@ import { NavegadorPrincipalComponent } from './navegador-principal/navegador-pri
     MatIconModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

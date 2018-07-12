@@ -25,6 +25,10 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.data.mensajeActual3.subscribe(mensaje => this.arregloCarrito = mensaje)
+
+
   }
 
   obtenerDatos(id){
@@ -33,17 +37,23 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
         (data:any[]) => {
 
           this.juegoDetalle = data
-
-          console.log(this.juegoDetalle)
         }
 
       )
 
   }
 
-  mandarDatos(){
+  agregarDatos() {
 
     this.arregloCarrito.push(this.juegoDetalle)
+
+    console.log(this.arregloCarrito)
+
+    this.mandarDatos()
+
+  }
+
+  mandarDatos() {
 
     this.data.cambiarMensaje3(this.arregloCarrito)
   }

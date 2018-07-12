@@ -35,7 +35,6 @@ export class DesarrolladoraDetalleComponent implements OnInit {
 
           this.datosHijos = data[0].juegos
 
-          //console.log(this.desarrolladoraDetalle)
         }
 
       )

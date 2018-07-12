@@ -7,16 +7,69 @@
 
 </div>
 
-<div class="row"  style="margin-left: 20px">
+<div class="row" style="margin-left: 30px">
+
+  <div class="col-sm-6">
+
+      <div class="card">
+        <div class="card-header" style="font-weight: bold">Datos de la Cuenta</div>
+        <div class="card-body" *ngFor="let info of datosFactura">
+          <h5 class="card-title">Datos del usuario</h5>
+          <p class="card-text">Nombre: Juan</p>
+          <p class="card-text">Apellido: Mendieta</p>
+          <p class="card-text">Direccion: Loja</p>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="col-sm-6">
+
+    <button type="button" class="btn btn-success">Completar la orden</button>
+
+  </div>
+
+</div>
+
+<div class="row" style="margin-left: 30px">
+
+  <div class="col-sm-6">
+
+    <div *ngFor="let info of datosFactura">
+      <div class="card">
+        <div class="card-header" style="font-weight: bold">Factura</div>
+        <div class="card-body" *ngFor="let info of datosFactura">
+          <h5 class="card-title">Datos del cliente</h5>
+          <p class="card-text">Nombre: {{info.nombre}}</p>
+          <p class="card-text">Apellido: {{info.apellido}}</p>
+          <p class="card-text">Direccion: {{info.direccion}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-sm-6">
+
+    <app-modal-factura></app-modal-factura>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Editar Datos</button>
+
+  </div>
+
+</div>
+
+<div class="row"  style="margin-left: 30px">
 
   <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
-      <img class="card-img-top" src={{info[indice].imagenJuego}} alt="Card image cap">
+      <img class="card-img-top" src={{info[0].imagenJuego}} alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{info[indice].nombreJuego}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info[indice].plataforma}}</h6>
+        <h5 class="card-title">{{info[0].nombreJuego}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info[0].plataforma}}</h6>
         <button type="button" class="btn btn-primary">Eliminar</button>
       </div>
     </div>
   </div>
+
 </div>
