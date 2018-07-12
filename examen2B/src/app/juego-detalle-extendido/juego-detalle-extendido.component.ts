@@ -18,7 +18,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this._activatedRoute.params.subscribe(params =>{
 
-      this.obtenerDatos(params['id']);
+      this.obtenerDatos(params['idJuego']);
 
     });
 

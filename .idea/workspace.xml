@@ -202,7 +202,16 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="950" />
+=======
+<<<<<<< HEAD
+    <option name="x" value="950" />
+=======
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+>>>>>>> da828ee609e8b34f5ef00f156a421434ab60a2d9
+>>>>>>> 1bc6413dde9cb9db727181b6244a024faf7c4ca4
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -347,15 +356,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531265684052</updated>
+<<<<<<< HEAD
+      <workItem from="1531265685374" duration="6564000" />
+=======
       <workItem from="1531265685374" duration="6078000" />
       <workItem from="1531321488083" duration="8887000" />
+<<<<<<< HEAD
       <workItem from="1531334418166" duration="9983000" />
       <workItem from="1531352454259" duration="17039000" />
+=======
+      <workItem from="1531334418166" duration="8426000" />
+>>>>>>> da828ee609e8b34f5ef00f156a421434ab60a2d9
+>>>>>>> 1bc6413dde9cb9db727181b6244a024faf7c4ca4
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="41987000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="6564000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19960344" />
+=======
+    <option name="totallyTimeSpent" value="23391000" />
+>>>>>>> 1bc6413dde9cb9db727181b6244a024faf7c4ca4
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -363,13 +393,22 @@
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26966292" />
+>>>>>>> da828ee609e8b34f5ef00f156a421434ab60a2d9
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32909605" />
+=======
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32627118" />
+<<<<<<< HEAD
+=======
+>>>>>>> da828ee609e8b34f5ef00f156a421434ab60a2d9
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+>>>>>>> 1bc6413dde9cb9db727181b6244a024faf7c4ca4
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
