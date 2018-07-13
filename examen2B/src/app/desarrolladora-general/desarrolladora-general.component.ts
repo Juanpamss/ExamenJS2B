@@ -4,7 +4,7 @@ import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.servic
 @Component({
   selector: 'app-desarrolladora-general',
   templateUrl: './desarrolladora-general.component.html',
-  styleUrls: ['./desarrolladora-general.component.css']
+  styleUrls: ['./desarrolladora-general.component.css'],
 })
 export class DesarrolladoraGeneralComponent implements OnInit{
 

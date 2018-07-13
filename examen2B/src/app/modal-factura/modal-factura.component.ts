@@ -34,16 +34,14 @@ export class ModalFacturaComponent implements OnInit {
 
   agregarDatos(formData) {
 
-    this.datosFactura.splice(0, 1)
-
-    this.datosFactura.push(
+    this.datosFactura =
       {
         'nombre': formData.value.nombre,
         'apellido': formData.value.apellido,
         'direccion': formData.value.direccion
-      })
+      }
 
-    console.log(this.datosFactura)
+    //console.log(this.datosFactura)
 
     this.resetForm()
 

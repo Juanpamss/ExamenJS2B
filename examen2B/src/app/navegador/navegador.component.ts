@@ -25,6 +25,8 @@ export class NavegadorComponent implements OnInit {
 
     this.data.mensajeActual2.subscribe(mensaje => this.respuestaServerJueg = mensaje)
 
+    this.ocultarElementos()
+
   }
 
   onNameKeyUp(event:any){
@@ -40,7 +42,7 @@ export class NavegadorComponent implements OnInit {
         (data:any[]) => {
 
           this.respuestaServerDesa = data
-          console.log(this.respuestaServerDesa)
+
         }
 
       )
@@ -50,18 +52,41 @@ export class NavegadorComponent implements OnInit {
         (data:any[]) => {
 
           this.respuestaServerJueg = data
-          //console.log(this.respuestaServerJueg)
+
         }
 
       )
 
     this.mandarDatos()
 
+    this.mostrarElementos()
+
   }
+
   mandarDatos(){
 
     this.data.cambiarMensaje(this.respuestaServerDesa)
     this.data.cambiarMensaje2(this.respuestaServerJueg)
+  }
+
+  mostrarElementos() {
+
+    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('tituloDesa');
+    mostrarLabelDesarrolladora.style.display = "block";
+
+    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('tituloJuego');
+    mostrarLabelJuego.style.display = "block";
+
+  }
+
+  ocultarElementos() {
+
+    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('tituloDesa');
+    mostrarLabelDesarrolladora.style.display = "none";
+
+    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('tituloJuego');
+    mostrarLabelJuego.style.display = "none";
+
   }
 
 

@@ -10,7 +10,17 @@ import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.servic
 })
 export class JuegoDetalleExtendidoComponent implements OnInit {
 
-  juegoDetalle: any
+  juegoDetalle = {
+    nombreJuego: '',
+    plataforma: '',
+    fechaLanzamiento: '',
+    precio: '',
+    estado: '',
+    imagenJuego: '',
+    id: ''
+  }
+
+  estadoIni: any
 
   arregloCarrito = []
 
@@ -28,7 +38,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.data.mensajeActual3.subscribe(mensaje => this.arregloCarrito = mensaje)
 
-    //this.ocultarElementos()
+    this.verEstado()
 
   }
 
@@ -37,9 +47,11 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
       .subscribe(
         (data:any[]) => {
 
-          this.juegoDetalle = data
+          this.juegoDetalle = data[0]
 
-          //console.log(this.juegoDetalle[0].estado)
+          this.estadoIni = this.juegoDetalle.estado
+
+          console.log('ini',this.estadoIni)
         }
 
       )
@@ -48,13 +60,13 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
   agregarDatos(id) {
 
-    this.arregloCarrito.push(this.juegoDetalle)
+    this.cambiarEstado(id)
 
-    //console.log(this.arregloCarrito)
+    this.verEstado()
+
+    this.ocultarElementos()
 
     this.mandarDatos()
-
-    this.cambiarEstado(id)
 
   }
 
@@ -77,13 +89,42 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
   ocultarElementos() {
 
-    if(this.juegoDetalle[0].estado == false)
+    /*var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('tituloDesa');
+    mostrarLabelDesarrolladora.style.display = "none";
 
-    console.log('hola')
+    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('tituloJuego');
+    mostrarLabelJuego.style.display = "none";
 
-    var ocultarTablaDetalle = <HTMLFormElement>document.getElementById('botonAgregarCarrito');
-    ocultarTablaDetalle.style.display = "none";
+    var mostrarJuegos = <HTMLFormElement>document.getElementById('disponible');
+    mostrarJuegos.style.display = "none";
+
+    var mostrarListJuegos = <HTMLFormElement>document.getElementById('listaJuegos');
+    mostrarListJuegos.style.display = "none";*/
 
   }
+
+  verEstado(){
+
+    console.log('estado ', this.estadoIni)
+
+    /*if(this.juegoDetalle.estado){
+
+      var mostrarListJuegos = <HTMLFormElement>document.getElementById('botonAgregarCarrito');
+      mostrarListJuegos.style.display = "block";
+      var mostrarListJuegos = <HTMLFormElement>document.getElementById('noDisponible');
+      mostrarListJuegos.style.display = "none";
+
+    }else{
+
+      var mostrarListJuegos = <HTMLFormElement>document.getElementById('botonAgregarCarrito');
+      mostrarListJuegos.style.display = "none";
+      var mostrarListJuegos = <HTMLFormElement>document.getElementById('noDisponible');
+      mostrarListJuegos.style.display = "block";
+
+    }*/
+
+  }
+
+
 
 }

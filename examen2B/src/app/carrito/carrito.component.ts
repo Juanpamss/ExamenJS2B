@@ -9,7 +9,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class CarritoComponent implements OnInit {
 
-  datosFactura = []
+  datosFactura : {nombre: string, apellido: string, direccion: string}
 
   listaCompra = []
 
@@ -27,11 +27,15 @@ export class CarritoComponent implements OnInit {
 
     this.items = this.listaCompra.length
 
+    this.calcularTotal()
+
     //console.log(this.datosFactura)
 
   }
 
   eliminarItem(id){
+
+    this.total -= parseFloat(this.listaCompra[id].precio)
 
     this.listaCompra.splice(id,1)
 
@@ -45,7 +49,12 @@ export class CarritoComponent implements OnInit {
 
   }
 
-
+  private calcularTotal() {
+    this.total = this.listaCompra.reduce((acumulador, actual) => {
+      acumulador += parseFloat(actual.precio);
+      return acumulador;
+    }, 0);
+  }
 
 
 

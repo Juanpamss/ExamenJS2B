@@ -24,8 +24,8 @@ import {MatNativeDateModule} from "@angular/material";
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule } from '@angular/forms';
-import { SearchPipe } from './pipes.pipe';
 import { ModalFacturaComponent } from './modal-factura/modal-factura.component';
+import { FiltradorPipe } from './pipes/filtrador.pipe';
 
 
 @NgModule({
@@ -40,8 +40,8 @@ import { ModalFacturaComponent } from './modal-factura/modal-factura.component';
     JuegoComponent,
     JuegoDetalleExtendidoComponent,
     NavegadorPrincipalComponent,
-    SearchPipe,
-    ModalFacturaComponent
+    ModalFacturaComponent,
+    FiltradorPipe,
   ],
   imports: [
     BrowserModule,

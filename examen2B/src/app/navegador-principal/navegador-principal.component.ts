@@ -8,7 +8,7 @@ import {ServicioDesarrolladorasService} from "../servicio-desarrolladoras.servic
 })
 export class NavegadorPrincipalComponent implements OnInit {
 
-  items
+  items: any
 
   constructor(private data: ServicioDesarrolladorasService) {
 

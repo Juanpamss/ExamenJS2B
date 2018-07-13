@@ -7,32 +7,49 @@
 
 </div>
 
-<div id="disponible" class="row"  style="margin-left: 20px">
-  <div class="col-sm-2" *ngFor="let info of juegoDetalle; let indice = index" style="margin-right: 20px; margin-top: 20px">
-    <div class="card" style="width: 250px">
-      <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{info.nombreJuego}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
-        <button id="botonAgregarCarrito" type="button" (click)="agregarDatos(info.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
-      </div>
-    </div>
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <h2 style="padding-left: 40px">Juegos:</h2>
+
   </div>
+
 </div>
 
-<!--<div id="noDisponible" class="row"  style="margin-left: 20px">
+<div id="disponible" class="row"  style="margin-left: 20px">
+  <div class="col-sm-6">
 
-  <div class="col-sm-2" *ngFor="let info of juegoDetalle; let indice = index" style="margin-right: 20px; margin-top: 20px">
-    <div class="card" style="width: 250px">
-      <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{info.nombreJuego}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
-        <button type="button" (click)="agregarDatos(info.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
+    <div class="col-sm-2"style="margin-right: 20px; margin-top: 20px">
+      <div class="card" style="width: 250px">
+        <img class="card-img-top" src={{juegoDetalle.imagenJuego}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{juegoDetalle.nombreJuego}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{juegoDetalle.plataforma}}</h6>
+          <button id="botonAgregarCarrito" type="button" (click)="agregarDatos(juegoDetalle.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
+        </div>
       </div>
     </div>
+
   </div>
-</div>-->
+
+  <div class="col-sm-6">
+
+    <div id="noDisponible" class="row"  style="margin-top: 150px">
+
+      <button type="button" [routerLink]="['/home']" class="btn btn-danger">
+
+        <mat-icon >warning</mat-icon> No disponible en este momento
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
 
 
 <!--
