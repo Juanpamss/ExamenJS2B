@@ -11,7 +11,8 @@
 
   <div class="col-sm-12">
 
-    <h2 style="padding-left: 40px">Juegos:</h2>
+    <br>
+    <h2 style="padding-left: 40px">Detalle del juego:</h2>
 
   </div>
 
@@ -21,12 +22,13 @@
   <div class="col-sm-6">
 
     <div class="col-sm-2"style="margin-right: 20px; margin-top: 20px">
-      <div class="card" style="width: 250px">
+      <div class="card" style="width: 250px; margin-left: 200px">
         <img class="card-img-top" src={{juegoDetalle.imagenJuego}} alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{juegoDetalle.nombreJuego}}</h5>
+          <h5 class="card-title" style="text-align: center">{{juegoDetalle.nombreJuego}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{juegoDetalle.plataforma}}</h6>
-          <button id="botonAgregarCarrito" type="button" (click)="agregarDatos(juegoDetalle.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
+          <h6 class="card-subtitle mb-2 text-muted">Precio: {{juegoDetalle.precio}} $</h6>
+          <button id="botonAgregarCarrito" style="margin-left: 35px" type="button" (click)="agregarDatos(juegoDetalle.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir al Carrito</button>
         </div>
       </div>
     </div>

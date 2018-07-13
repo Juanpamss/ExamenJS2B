@@ -2,7 +2,7 @@
 
   <div class="col-sm-12">
 
-    <h2 id="tituloDesa" style="padding-left: 40px">Desarrolladoras:</h2>
+    <h2 style="padding-left: 40px">Desarrolladoras:</h2>
 
   </div>
 
@@ -11,12 +11,12 @@
 <div class="row"  style="margin-left: 20px">
 
   <div class="col-sm-2" *ngFor="let info of resultadosDesa"  style="margin-right: 20px; margin-top: 20px">
-    <div class="card" style="width: 200px;">
+    <div class="card" style="width: 250px; margin-left: 200px">
       <img class="card-img-top" src={{info.imagenDesarrolladora}} alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{info.nombre}}</h5>
+        <h5 class="card-title" style="text-align: center">{{info.nombre}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Ubicacion: {{info.ubicacion}}</h6>
-        <button type="button" [routerLink]="['/desarrolladora', info.id]" (click)="datosJuego()" class="btn btn-primary">Detalles</button>
+        <button type="button" style="margin-left: 60px" [routerLink]="['/desarrolladora', info.id]" (click)="datosJuego()" class="btn btn-primary">Detalles</button>
       </div>
     </div>
   </div>

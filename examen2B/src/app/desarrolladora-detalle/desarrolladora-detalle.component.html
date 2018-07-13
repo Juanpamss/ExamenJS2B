@@ -10,18 +10,19 @@
 <div class="row">
   <div class="col-sm-12">
     <br>
-    <h2 style="padding-left: 40px">Desarrolladora:</h2>
+    <h2 style="padding-left: 40px">Detalle de la desarrolladora:</h2>
   </div>
 </div>
 
 <div class="row"  style="margin-left: 20px; margin-top: 20px">
   <div class="col-sm-2" *ngFor="let info of desarrolladoraDetalle; let indice = index">
-    <div class="card" style="width: 500px;">
+    <div class="card" style="width: 500px; margin-left: 200px">
       <div class="card-body">
-        <h5 class="card-title">{{info.nombre}}</h5>
+        <h5 class="card-title" style="text-align: center">{{info.nombre}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Ubicacion: {{info.ubicacion}}</h6>
         <h6 class="card-subtitle mb-2 text-muted">Fecha de Creación: {{info.fechaCreacion}}</h6>
-        <img src={{info.imagenDesarrolladora}} alt="Card image cap">
+        <h6 class="card-subtitle mb-2 text-muted">Numero de juegos: {{info.juegos.length}}</h6>
+        <img class="card-img-top" src={{info.imagenDesarrolladora}} alt="Card image cap" style="padding-left: 5px">
       </div>
     </div>
   </div>

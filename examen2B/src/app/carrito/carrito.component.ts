@@ -29,7 +29,7 @@ export class CarritoComponent implements OnInit {
 
     this.calcularTotal()
 
-    //console.log(this.datosFactura)
+    this.ocultar()
 
   }
 
@@ -40,6 +40,8 @@ export class CarritoComponent implements OnInit {
     this.listaCompra.splice(idArreglo,1)
 
     this.cambiarEstado(idJuego)
+
+    this.ocultar();
 
     this.mandarDatos();
 
@@ -83,6 +85,17 @@ export class CarritoComponent implements OnInit {
     this.listaCompra = []
 
     this.mandarDatos();
+
+  }
+
+  ocultar(){
+
+    if(this.listaCompra.length == 0){
+
+      var mostrarListJuegos = <HTMLFormElement>document.getElementById('juegosComprar');
+      mostrarListJuegos.style.display = "none";
+
+    }
 
   }
 

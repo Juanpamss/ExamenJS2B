@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="background-color: lightblue">
 
   <div class="col-sm-6">
 
@@ -10,13 +10,13 @@
 
     <ul class="nav justify-content-end" style="margin-right: 20px">
       <li class="nav-item">
-        <button type="button" class="btn btn-light" style="padding-top: 15px">
-          <mat-icon [matBadge]="items.length" matBadgeColor="warn" routerLink="/carrito">shopping_cart</mat-icon>
+        <button type="button" [routerLink]="['/carrito']" class="btn btn-light" style="padding-top: 15px; background-color: lightblue">
+          <mat-icon [matBadge]="items.length" matBadgeColor="warn">shopping_cart</mat-icon>
         </button>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-light" style="padding-top: 15px">
-          <mat-icon matBadgeColor="warn" routerLink="/home">account_box</mat-icon>Juan Pablo Mendieta
+        <button type="button" [routerLink]="['/home']" class="btn btn-light" style="padding-top: 15px; background-color: lightblue">
+          <mat-icon matBadgeColor="warn">account_box</mat-icon>Juan Pablo Mendieta
         </button>
       </li>
     </ul>

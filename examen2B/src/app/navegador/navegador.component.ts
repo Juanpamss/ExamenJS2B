@@ -71,20 +71,20 @@ export class NavegadorComponent implements OnInit {
 
   mostrarElementos() {
 
-    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('tituloDesa');
+    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('desarrolladora');
     mostrarLabelDesarrolladora.style.display = "block";
 
-    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('tituloJuego');
+    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('juego');
     mostrarLabelJuego.style.display = "block";
 
   }
 
   ocultarElementos() {
 
-    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('tituloDesa');
+    var mostrarLabelDesarrolladora = <HTMLFormElement>document.getElementById('desarrolladora');
     mostrarLabelDesarrolladora.style.display = "none";
 
-    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('tituloJuego');
+    var mostrarLabelJuego = <HTMLFormElement>document.getElementById('juego');
     mostrarLabelJuego.style.display = "none";
 
   }

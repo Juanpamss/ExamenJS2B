@@ -51,7 +51,7 @@
 
 <br>
 
-<div class="row">
+<div id="juegosComprar" class="row">
   <div class="col-sm-12">
     <br>
     <h2 style="padding-left: 40px">Juegos a comprar:</h2>
@@ -63,7 +63,7 @@
     <div class="card" style="width: 250px">
       <img class="card-img-top" src={{info.imagenJuego}} alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{info.nombreJuego}}</h5>
+        <h5 class="card-title" style="text-align: center">{{info.nombreJuego}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
         <button type="button" (click)="eliminarItem(indice, info.id)" class="btn btn-primary">Eliminar</button>
       </div>
@@ -73,7 +73,7 @@
 
 <div class="row"  style="margin-left: 30px">
   <div class="col-sm-2"style="margin-left: 1000px; margin-top: 20px">
-    <div class="card" style="width: 250px">
+    <div class="card" style="width: 250px; margin-bottom: 20px">
       <div class="card-body">
         <h5 class="card-title">Total: {{total}}</h5>
       </div>
