@@ -49,6 +49,8 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
           this.juegoDetalle = data[0]
 
+          //Pasar funcion con parametro para probar
+
           this.estadoIni = this.juegoDetalle.estado
 
           console.log('ini',this.estadoIni)
