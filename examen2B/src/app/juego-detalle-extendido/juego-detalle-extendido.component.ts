@@ -38,7 +38,6 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.data.mensajeActual3.subscribe(mensaje => this.arregloCarrito = mensaje)
 
-    this.verEstado()
 
   }
 
@@ -51,7 +50,8 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
           this.estadoIni = this.juegoDetalle.estado
 
-          console.log('ini',this.estadoIni)
+          this.verEstado(this.estadoIni)
+
         }
 
       )
@@ -62,7 +62,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.cambiarEstado(id)
 
-    this.verEstado()
+    this.arregloCarrito.push(this.juegoDetalle)
 
     this.ocultarElementos()
 
@@ -103,11 +103,11 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
   }
 
-  verEstado(){
+  verEstado(estado){
 
-    console.log('estado ', this.estadoIni)
+    console.log('estado ', estado)
 
-    /*if(this.juegoDetalle.estado){
+    if(estado){
 
       var mostrarListJuegos = <HTMLFormElement>document.getElementById('botonAgregarCarrito');
       mostrarListJuegos.style.display = "block";
@@ -121,7 +121,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
       var mostrarListJuegos = <HTMLFormElement>document.getElementById('noDisponible');
       mostrarListJuegos.style.display = "block";
 
-    }*/
+    }
 
   }
 
