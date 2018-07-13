@@ -4,8 +4,10 @@
   </div>
 </div>
 
-<div class="row" style="margin-left: 30px">
+<br>
+<br>
 
+<div class="row" style="margin-left: 30px">
   <div class="col-sm-6">
       <div class="card">
         <div class="card-header" style="font-weight: bold">Datos de la Cuenta</div>
@@ -47,6 +49,15 @@
 
 </div>
 
+<br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <h2 style="padding-left: 40px">Juegos a comprar:</h2>
+  </div>
+</div>
+
 <div class="row"  style="margin-left: 30px">
   <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
@@ -61,7 +72,7 @@
 </div>
 
 <div class="row"  style="margin-left: 30px">
-  <div class="col-sm-2"style="margin-right: 20px; margin-top: 20px">
+  <div class="col-sm-2"style="margin-left: 1000px; margin-top: 20px">
     <div class="card" style="width: 250px">
       <div class="card-body">
         <h5 class="card-title">Total: {{total}}</h5>
