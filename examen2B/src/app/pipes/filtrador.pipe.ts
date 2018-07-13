@@ -5,18 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FiltradorPipe implements PipeTransform {
 
-  transform(valor: any, termino: any): any {
+  transform(valor: any, term: any): any {
 
     //Verificar si la busqueda es no definida
-    if(termino === undefined){
+    if(term === undefined){
 
       return valor;
 
     }else{
 
-      return valor.filter(function(valor){
+      return valor.filter(function(val){
 
-        return valor.name.toLowerCase().includes(termino.toLowerCase());
+        return val.name.toLowerCase().includes(term.toLowerCase());
 
       })
 

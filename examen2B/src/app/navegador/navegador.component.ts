@@ -37,7 +37,7 @@ export class NavegadorComponent implements OnInit {
 
   getProfile(){
 
-    this.httpClient.get(`http://localhost:1337/desarrolladora?nombre=${this.buscar}`)
+    this.httpClient.get(`http://localhost:1337/desarrolladora?where={"nombre":{"contains":"${this.buscar}"}}`)
       .subscribe(
         (data:any[]) => {
 
@@ -47,7 +47,7 @@ export class NavegadorComponent implements OnInit {
 
       )
 
-    this.httpClient2.get(`http://localhost:1337/juego?nombreJuego=${this.buscar}`)
+    this.httpClient2.get(`http://localhost:1337/juego?where={"nombreJuego":{"contains":"${this.buscar}"}}`)
       .subscribe(
         (data:any[]) => {
 

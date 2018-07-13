@@ -16,6 +16,7 @@ export class DesarrolladoraGeneralComponent implements OnInit{
 
     this.data.mensajeActual.subscribe(mensaje => this.resultadosDesa = mensaje)
 
+
   }
 
   datosJuego(){
