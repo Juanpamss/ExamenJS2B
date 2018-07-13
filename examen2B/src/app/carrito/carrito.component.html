@@ -4,8 +4,10 @@
   </div>
 </div>
 
-<div class="row" style="margin-left: 30px">
+<br>
+<br>
 
+<div class="row" style="margin-left: 30px">
   <div class="col-sm-6">
       <div class="card">
         <div class="card-header" style="font-weight: bold">Datos de la Cuenta</div>
@@ -20,7 +22,7 @@
   </div>
 
   <div class="col-sm-6">
-    <button type="button" class="btn btn-success">Completar la orden</button>
+    <button type="button" (click)="completarOrden()" [routerLink]="'[/home]'" class="btn btn-success">Completar la orden</button>
   </div>
 </div>
 
@@ -47,6 +49,15 @@
 
 </div>
 
+<br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <h2 style="padding-left: 40px">Juegos a comprar:</h2>
+  </div>
+</div>
+
 <div class="row"  style="margin-left: 30px">
   <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
@@ -54,14 +65,14 @@
       <div class="card-body">
         <h5 class="card-title">{{info.nombreJuego}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info.plataforma}}</h6>
-        <button type="button" (click)="eliminarItem(indice)" class="btn btn-primary">Eliminar</button>
+        <button type="button" (click)="eliminarItem(indice, info.id)" class="btn btn-primary">Eliminar</button>
       </div>
     </div>
   </div>
 </div>
 
 <div class="row"  style="margin-left: 30px">
-  <div class="col-sm-2"style="margin-right: 20px; margin-top: 20px">
+  <div class="col-sm-2"style="margin-left: 1000px; margin-top: 20px">
     <div class="card" style="width: 250px">
       <div class="card-body">
         <h5 class="card-title">Total: {{total}}</h5>

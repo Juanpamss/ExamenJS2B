@@ -33,11 +33,13 @@ export class CarritoComponent implements OnInit {
 
   }
 
-  eliminarItem(id){
+  eliminarItem(idArreglo, idJuego){
 
-    this.total -= parseFloat(this.listaCompra[id].precio)
+    this.total -= parseFloat(this.listaCompra[idArreglo].precio)
 
-    this.listaCompra.splice(id,1)
+    this.listaCompra.splice(idArreglo,1)
+
+    this.cambiarEstado(idJuego)
 
     this.mandarDatos();
 
@@ -56,6 +58,33 @@ export class CarritoComponent implements OnInit {
     }, 0);
   }
 
+  cambiarEstado(id){
+    this.httpClient.put(`http://localhost:1337/juego/${id}`, {
+
+      estado : true
+
+    }).subscribe(
+      res => {
+        //console.log(res);
+      }
+    );
+  }
+
+  completarOrden(){
+
+    for(let i=0; i<this.listaCompra.length; i++){
+
+      this.cambiarEstado(this.listaCompra[i].id)
+
+    }
+
+    this.total = 0
+
+    this.listaCompra = []
+
+    this.mandarDatos();
+
+  }
 
 
 }
