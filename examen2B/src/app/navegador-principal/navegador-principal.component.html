@@ -2,14 +2,16 @@
 
   <div class="col-sm-12">
 
-    <ul class="nav justify-content-end">
+    <ul class="nav justify-content-end" style="margin-right: 20px">
       <li class="nav-item">
-        <button mat-button="" style="padding-top: 10px">
+        <button type="button" class="btn btn-light" style="padding-top: 15px">
           <mat-icon [matBadge]="items.length" matBadgeColor="warn" routerLink="/carrito">shopping_cart</mat-icon>
         </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Usuario</a>
+        <button type="button" class="btn btn-light" style="padding-top: 15px">
+          <mat-icon matBadgeColor="warn" routerLink="/home">account_box</mat-icon>
+        </button>
       </li>
     </ul>
   </div>

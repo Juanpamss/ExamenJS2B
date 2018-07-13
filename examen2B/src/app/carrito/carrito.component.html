@@ -51,14 +51,25 @@
 </div>
 
 <div class="row"  style="margin-left: 30px">
-  <div class="col-sm-2" *ngFor="let info of listaCompra" style="margin-right: 20px; margin-top: 20px">
+  <div class="col-sm-2" *ngFor="let info of listaCompra; let indice = index" style="margin-right: 20px; margin-top: 20px">
     <div class="card" style="width: 250px">
       <img class="card-img-top" src={{info[0].imagenJuego}} alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{info[0].nombreJuego}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Plataformas: {{info[0].plataforma}}</h6>
-        <button type="button" class="btn btn-primary">Eliminar</button>
+        <button type="button" (click)="eliminarItem(indice)" class="btn btn-primary">Eliminar</button>
       </div>
     </div>
   </div>
 </div>
+
+<div class="row"  style="margin-left: 30px">
+  <div class="col-sm-2"style="margin-right: 20px; margin-top: 20px">
+    <div class="card" style="width: 250px">
+      <div class="card-body">
+        <h5 class="card-title">{{total}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+

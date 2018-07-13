@@ -28,6 +28,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.data.mensajeActual3.subscribe(mensaje => this.arregloCarrito = mensaje)
 
+    //this.ocultarElementos()
 
   }
 
@@ -37,6 +38,8 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
         (data:any[]) => {
 
           this.juegoDetalle = data
+
+          //console.log(this.juegoDetalle[0].estado)
         }
 
       )
@@ -47,7 +50,7 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     this.arregloCarrito.push(this.juegoDetalle)
 
-    console.log(this.arregloCarrito)
+    //console.log(this.arregloCarrito)
 
     this.mandarDatos()
 
@@ -67,9 +70,20 @@ export class JuegoDetalleExtendidoComponent implements OnInit {
 
     }).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
       }
     );
+  }
+
+  ocultarElementos() {
+
+    if(this.juegoDetalle[0].estado == false)
+
+    console.log('hola')
+
+    var ocultarTablaDetalle = <HTMLFormElement>document.getElementById('botonAgregarCarrito');
+    ocultarTablaDetalle.style.display = "none";
+
   }
 
 }

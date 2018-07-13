@@ -15,6 +15,8 @@ export class CarritoComponent implements OnInit {
 
   items: number
 
+  total: number
+
   constructor(private data: ServicioDesarrolladorasService, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -25,9 +27,26 @@ export class CarritoComponent implements OnInit {
 
     this.items = this.listaCompra.length
 
-    console.log(this.datosFactura)
+    //console.log(this.datosFactura)
 
   }
+
+  eliminarItem(id){
+
+    this.listaCompra.splice(id,1)
+
+    this.mandarDatos();
+
+  }
+
+  mandarDatos(){
+
+    this.data.cambiarMensaje3(this.listaCompra)
+
+  }
+
+
+
 
 
 }
